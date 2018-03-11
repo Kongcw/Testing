@@ -91,7 +91,7 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 number++;
-                mMyViewModel.setCount(number);
+                mMyViewModel.getCount().setValue(number);
                 fragmentFirstBinding.shownumber.setText(String.valueOf(mMyViewModel.getCount()));
             }
         });
