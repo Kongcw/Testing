@@ -1,8 +1,8 @@
 package com.example.kongcw.testing;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,10 +11,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirstFragment firstFragment  = new FirstFragment();
-        FragmentManager fm = getSupportFragmentManager();
-        fm.beginTransaction()
-                .add(R.id.main_container, firstFragment)
-                .commit();
+//        if (savedInstanceState == null) {
+            FirstFragment firstFragment = new FirstFragment();
+            FragmentManager fm = getSupportFragmentManager();
+            fm.beginTransaction()
+                    .add(R.id.main_container, firstFragment)
+                    .commit();
+//        }
     }
 }
